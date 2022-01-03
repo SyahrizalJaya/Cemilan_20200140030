@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Tabel Sayur</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table, th,td{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+</style>
+    </head>
+    <body>
+        <div>Sayur</div>
+        <hr>
+        <table border="3", style="width:50%">
+            <thead>
+                <tr>
+                    <th>Nama sayur</th>
+                    <th>Harga perkilo</th>
+                    <th>Jumlah beli</th>
+                    <th>Jumlah bayar</th>
+                    <th>Harga awal (RP)</th>
+                    <th>Diskon (%)</th>
+                    <th>Harga diskon</th>
+                    <th>Kembalian</th>
+                </tr>
+            </thead>
+            <tbody th:each="baki:${viewer}">
+                <tr>
+                    <td th:text="${baki[0]}"></td>
+                    <td th:text="${baki[1]}"></td>
+                    <td th:text="${baki[2]}"></td>
+                    <td th:text="${baki[3]}"></td>
+                    <td th:text="${baki[4]}"></td>
+                    <td th:text="${baki[5]}"></td>
+                    <td th:text="${baki[6]}"></td>
+                    <td th:text="${baki[7]}"></td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <p th:text="${result}"></p>
+    </body>
+</html>
