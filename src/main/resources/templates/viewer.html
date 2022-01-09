@@ -14,13 +14,12 @@ and open the template in the editor.
                 border: 1px solid black;
                 border-collapse: collapse;
             }
-</style>
+        </style>
     </head>
     <body>
         <div>Sayur</div>
         <hr>
         <table border="3", style="width:50%">
-            <thead>
                 <tr>
                     <th>Nama sayur</th>
                     <th>Harga perkilo</th>
@@ -31,21 +30,16 @@ and open the template in the editor.
                     <th>Harga diskon</th>
                     <th>Kembalian</th>
                 </tr>
-            </thead>
-            <tbody th:each="baki:${viewer}">
                 <tr>
-                    <td th:text="${baki[0]}"></td>
-                    <td th:text="${baki[1]}"></td>
-                    <td th:text="${baki[2]}"></td>
-                    <td th:text="${baki[3]}"></td>
-                    <td th:text="${baki[4]}"></td>
-                    <td th:text="${baki[5]}"></td>
-                    <td th:text="${baki[6]}"></td>
-                    <td th:text="${baki[7]}"></td>
+                    <td th:text=${namasayur}></td>
+                    <td th:text=${hargaperkilo}></td>
+                    <td th:text=${jumlahbeli}></td>
+                    <td th:text=${jumlahbayar}></td>
+                    <td th:text=${hargaawal}></td>
+                    <td th:text=${diskon}></td>
+                    <td th:text=${hargadiskon}></td>
+                    <td th:text=${kembali}></td>
                 </tr>
-            </tbody>
-        </table>
-        <hr>
-        <p th:text="${result}"></p>
+        </table>    
     </body>
 </html>
